@@ -250,8 +250,8 @@ const errorHandler = (error, request, response, next) => {
   } else if (error.name === 'JsonWebTokenError') {  // highlight-line
     return response.status(401).json({ // highlight-line
       error: 'invalid token' // highlight-line
-    }) // highlight-line
-  }
+    })
+  } // highlight-line
 
   logger.error(error.message)
 
